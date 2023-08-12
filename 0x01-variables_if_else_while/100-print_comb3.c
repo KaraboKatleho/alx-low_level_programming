@@ -1,50 +1,33 @@
 #include <stdio.h>
 /**
- * main - print numbers in 3s separated by , and space
+ * main - prints all possible different combinations of two digits
  *
- * Return: (0)
+ * Return: Always 0 (success)
  *
 */
 int main(void)
 {
-	int num1, num2, num3;
+	int ones = '0';
+	int tens = '0';
 	
-	num1= '0';
-	num2= '0';
-	num3= '0';
-
-	while(num1 <= '9')
+	for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
 	{
-		while (num2 <= '9')
+		for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
 		{
-			num3 = '0';
-			while (num3 <= '9')
+			if (!((ones == tens) || (tens > ones)))/*eliminates repitition*/
 			{
-				if (num1 < num2 && num2 < num3)
+				if (!(ones == '9' && tens == '8'))/*addes comma and space*/
 				{
 
-				putchar(num1);
-				putchar(num2);
-				putchar(num3);
-
-				if (num1 != '7')
-				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			num3++;
 		}
-		num2++;
 	}
-	num1++;
-	num2 = '0';
-}
-putchar('\n');
 
-return (0);
+	putchar('\n');
+	return (0);
 
 }
-			
-			
 
