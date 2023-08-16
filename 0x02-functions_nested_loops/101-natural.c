@@ -5,7 +5,7 @@
  * Return: Always (Success)
  */
 
-int mauin(void)
+int main(void)
 
 {
 	int i, z = 0;
