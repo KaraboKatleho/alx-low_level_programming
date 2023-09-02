@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			e = argv[1];
+			e = argv[i];
 
 		for (k = 0; k < strlen(e); k++)
 		{
